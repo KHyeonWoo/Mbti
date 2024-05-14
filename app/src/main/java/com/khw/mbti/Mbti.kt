@@ -22,9 +22,6 @@ fun MatchRoles(myMbti: String, name: String) : Mbti{
     else if (myMbti[1] == 's' && myMbti[3] == 'p') {
         person = Explorers(myMbti, name)
     }
-    else {
-        println("헛소리 하지 마세용~~")
-    }
     return person
 }
 open class Mbti(val myMbti: String, val name: String) {
