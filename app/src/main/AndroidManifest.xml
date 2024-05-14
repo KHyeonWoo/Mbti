@@ -23,7 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ESTJActivity" />
+        <activity android:name=".EstjActivity" />
         <activity android:name=".EstjLoveActivity" />
         <activity android:name=".GukActivity" />
         <activity android:name=".EstjBoyFreindActivity" />

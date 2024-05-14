@@ -23,16 +23,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.HorizontalAlignmentLine
-import androidx.compose.ui.layout.VerticalAlignmentLine
-import androidx.compose.ui.node.ModifierNodeElement
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.khw.mbti.ui.theme.MbtiTheme
 
-class ESTJActivity : ComponentActivity() {
+class EstjActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -41,7 +38,7 @@ class ESTJActivity : ComponentActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background
                 ) {
-                    Mbtiself()
+                    MbtiSelf()
                 }
             }
         }
@@ -49,7 +46,7 @@ class ESTJActivity : ComponentActivity() {
 }
 
 @Composable
-fun Mbtiself() {
+fun MbtiSelf() {
     Column(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
