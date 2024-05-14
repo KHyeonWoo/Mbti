@@ -1,29 +1,38 @@
 package com.khw.mbti
 
 fun main() {
-    val myMbti = "estj"
-    var person = Mbti(myMbti)
+    val hyeonwoo = MatchRoles("estj", "hyeonwoo")
+    hyeonwoo.introduce()
+
+
+    val jaeguk = MatchRoles("cute", "guukk")
+    jaeguk.introduce()
+}
+fun MatchRoles(myMbti: String, name: String) : Mbti{
+    var person = Mbti(myMbti,name)
     if (myMbti[1] == 'n' && myMbti[2] == 't') {
-        person = Analysts(myMbti)
+        person = Analysts(myMbti,name)
     }
     else if (myMbti[1] == 'n' && myMbti[2] == 'f') {
-        person = Diplomats(myMbti)
+        person = Diplomats(myMbti,name)
     }
     else if (myMbti[1] == 's' && myMbti[3] == 'j') {
-        person = Sentinels(myMbti)
+        person = Sentinels(myMbti,name)
     }
     else if (myMbti[1] == 's' && myMbti[3] == 'p') {
-        person = Explorers(myMbti)
+        person = Explorers(myMbti, name)
     }
-
-    person.introduce()
+    else {
+        println("헛소리 하지 마세용~~")
+    }
+    return person
 }
-open class Mbti(val myMbti: String) {
+open class Mbti(val myMbti: String, val name: String) {
     open fun introduce(){
-        println("제 mbti는 $myMbti 입니다.")
+        println("내 이름 $name mbti는 $myMbti 입니다.")
     }
 }
-class Analysts(myMbti: String) : Mbti(myMbti) {
+class Analysts(myMbti: String, name: String) : Mbti(myMbti, name) {
 
     override fun introduce(){
         super.introduce()
@@ -31,7 +40,7 @@ class Analysts(myMbti: String) : Mbti(myMbti) {
     }
 }
 
-class Diplomats(myMbti: String) : Mbti(myMbti) {
+class Diplomats(myMbti: String, name: String) : Mbti(myMbti, name) {
 
     override fun introduce(){
         super.introduce()
@@ -39,7 +48,7 @@ class Diplomats(myMbti: String) : Mbti(myMbti) {
     }
 }
 
-class Sentinels(myMbti: String) : Mbti(myMbti) {
+class Sentinels(myMbti: String, name: String) : Mbti(myMbti, name) {
 
     override fun introduce(){
         super.introduce()
@@ -47,7 +56,7 @@ class Sentinels(myMbti: String) : Mbti(myMbti) {
     }
 }
 
-class Explorers(myMbti: String) : Mbti(myMbti) {
+class Explorers(myMbti: String, name: String) : Mbti(myMbti, name) {
 
     override fun introduce(){
         super.introduce()
